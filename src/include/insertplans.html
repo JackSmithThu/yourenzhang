@@ -99,13 +99,15 @@
             $("#showallplans").hide();
             $("#closeplanslist").show();
         });
-        $("#closeplanslist").click(function(){
+         $("#closeplanslist").click(function(){
             insertplansdefault(plans_number);
             $("#closeplanslist").hide();
             $("#showallplans").show();
         });
-    });
 
+
+
+    });
     function insertplans(num)
     {
         $("#planslist").empty();
@@ -115,12 +117,21 @@
             var text = obj.data[i].plan;
             var time = "<span class=\"small\"><em>  &nbsp &nbsp " + obj.data[i].date + "</em></span>";
             var name = "<span class=\"small\"><em>  &nbsp &nbsp " + obj.data[i].name + "</em></span>"
-            var button_finish = "<button type=\"button\" class=\"pull-right btn btn-outline btn-success btn-xs\">完成</button>";
-            var button_edit="<button type=\"button\" class=\"pull-right btn btn-outline btn-primary btn-xs\">编辑</button>";
+            var button_finish="<button type=\"button\" btn_id = \"" + i + "\" class=\"pull-right btn btn-outline btn-success btn-finish btn-xs\">完成</button>";
+            var button_edit="<button type=\"button\" btn_id = \"" + i + "\" class=\"pull-right btn btn-outline btn-primary btn-edit btn-xs\">编辑</button>";
             var group_item = "<a href=\"#\" class=\"list-group-item\">"+ icon + text + name + time + button_finish + button_edit +"</a>";
-
             $("#planslist").append(group_item);
         }
+
+          $(".btn-finish").on("click",function (){
+            $(this).parent().hide();
+        });
+
+          $(".btn-edit").on("click",function (){
+             var location = 'friendinfo.html';
+             window.location.href = location;
+
+        });
     }
 
     function insertplansdefault(num)
