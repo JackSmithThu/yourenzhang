@@ -27,50 +27,12 @@
                         </div>
                         <!-- /.panel-heading -->
                         <div class="panel-body">
-                            <div class="list-group">
-                                <a href="#" class="list-group-item">
-                                    <i class="fa fa-clock-o fa-fw"></i>
-                                    李成
-                                    <span class="text-muted small"><em>  请李成吃火锅</em></span>
-                                    <span class="red small"><em>  2017年11月23日</em></span>
-                                    <button type="button" class="pull-right btn btn-outline btn-success btn-xs">完成</button>
-                                    <button type="button" class="pull-right btn btn-outline btn-primary btn-xs">编辑</button>
-                                </a>
-                                <a href="#" class="list-group-item">
-                                    <i class="fa fa-clock-o fa-fw"></i>
-                                    李成
-                                    <span class="text-muted small"><em>  请李成吃火锅</em></span>
-                                    <span class="red small"><em>  2017年11月23日</em></span>
-                                    <button type="button" class="pull-right btn btn-outline btn-success btn-xs">完成</button>
-                                    <button type="button" class="pull-right btn btn-outline btn-primary btn-xs">编辑</button>
-                                </a>
-                                <a href="#" class="list-group-item">
-                                    <i class="fa fa-clock-o fa-fw"></i>
-                                    李成
-                                    <span class="text-muted small"><em>  请李成吃火锅</em></span>
-                                    <span class="red small"><em>  2017年11月23日</em></span>
-                                    <button type="button" class="pull-right btn btn-outline btn-success btn-xs">完成</button>
-                                    <button type="button" class="pull-right btn btn-outline btn-primary btn-xs">编辑</button>
-                                </a>
-                                <a href="#" class="list-group-item">
-                                    <i class="fa fa-clock-o fa-fw"></i>
-                                    李成
-                                    <span class="text-muted small"><em>  请李成吃火锅</em></span>
-                                    <span class="red small"><em>  2017年11月23日</em></span>
-                                    <button type="button" class="pull-right btn btn-outline btn-success btn-xs">完成</button>
-                                    <button type="button" class="pull-right btn btn-outline btn-primary btn-xs">编辑</button>
-                                </a>
-                                <a href="#" class="list-group-item">
-                                    <i class="fa fa-clock-o fa-fw"></i>
-                                    李成
-                                    <span class="text-muted small"><em>  请李成吃火锅</em></span>
-                                    <span class="red small"><em>  2017年11月23日</em></span>
-                                    <button type="button" class="pull-right btn btn-outline btn-success btn-xs">完成</button>
-                                    <button type="button" class="pull-right btn btn-outline btn-primary btn-xs">编辑</button>
-                                </a>
+                            <div id="planslist" class="list-group">
+
                             </div>
                             <!-- /.list-group -->
-                            <a href="#" class="btn btn-primary btn-outline btn-block">查看所有计划</a>
+                            <a href="#" id="showallplans" class="btn btn-primary btn-outline btn-block">查看所有计划</a>
+                            <a href="#" id="closeplanslist" class="btn btn-primary btn-outline btn-block">收起计划列表</a>
                         </div>
                         <!-- /.panel-body -->
                     </div>
@@ -82,7 +44,9 @@
         <!-- /#page-wrapper -->
     </div>
     <!-- /#wrapper -->
+
      @@include('include/foot.html')
+        @@include('include/insertplans.html')
 </body>
 
 </html>

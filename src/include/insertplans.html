@@ -1,0 +1,144 @@
+<script type="text/javascript">
+
+    var obj = {
+        "status": 0,
+        "message": "success",
+        "data": [
+            {
+                "plan": "请李成吃火锅",
+                "name": "李成",
+                "date": "2017年11月18日",
+                "friend_id": 3
+            },
+            {
+                "plan": "请教刘宁前端的问题",
+                "name": "刘宁",
+                "date": "2017年11月19日",
+                "friend_id": 4
+            },
+            {
+                "plan": "请王朝吃牛肉火锅",
+                "name": "王朝",
+                "date": "2017年11月20日",
+                "friend_id": 6
+            },
+            {
+                "plan": "请王朝吃牛肉火锅",
+                "name": "王朝",
+                "date": "2017年11月20日",
+                "friend_id": 6
+            },
+            {
+                "plan": "请王朝吃牛肉火锅",
+                "name": "王朝",
+                "date": "2017年11月20日",
+                "friend_id": 6
+            },
+            {
+                "plan": "请王朝吃牛肉火锅",
+                "name": "王朝",
+                "date": "2017年11月20日",
+                "friend_id": 6
+            },
+            {
+                "plan": "请王朝吃牛肉火锅",
+                "name": "王朝",
+                "date": "2017年11月20日",
+                "friend_id": 6
+            },
+            {
+                "plan": "请王朝吃牛肉火锅",
+                "name": "王朝",
+                "date": "2017年11月20日",
+                "friend_id": 6
+            },
+            {
+                "plan": "请王朝吃牛肉火锅",
+                "name": "王朝",
+                "date": "2017年11月20日",
+                "friend_id": 6
+            },
+            {
+                "plan": "请王朝吃牛肉火锅",
+                "name": "王朝",
+                "date": "2017年11月20日",
+                "friend_id": 6
+            },
+            {
+                "plan": "请王朝吃牛肉火锅",
+                "name": "王朝",
+                "date": "2017年11月20日",
+                "friend_id": 6
+            },
+            {
+                "plan": "请王朝吃牛肉火锅",
+                "name": "王朝",
+                "date": "2017年11月20日",
+                "friend_id": 6
+            },
+            {
+                "plan": "请王朝吃牛肉火锅",
+                "name": "王朝",
+                "date": "2017年11月20日",
+                "friend_id": 6
+            },
+            {
+                "plan": "找品哥去唱歌",
+                "name": "张艺品",
+                "date": "2017年11月21日",
+                "friend_id": 5
+            }
+        ]
+    };
+    $(document).ready(function(){
+        $("#closeplanslist").hide();
+        var plans_number = 5;
+        insertplansdefault(plans_number);
+        $("#showallplans").click(function(){
+            insertplansall();
+            $("#showallplans").hide();
+            $("#closeplanslist").show();
+        });
+        $("#closeplanslist").click(function(){
+            insertplansdefault(plans_number);
+            $("#closeplanslist").hide();
+            $("#showallplans").show();
+        });
+    });
+
+    function insertplans(num)
+    {
+        $("#planslist").empty();
+        for (var i=0;i<num;i++)
+        {
+            var icon = "<i class=\"fa fa-clock-o fa-fw\"></i>";
+            var text = obj.data[i].plan;
+            var time = "<span class=\"small\"><em>  &nbsp &nbsp " + obj.data[i].date + "</em></span>";
+            var name = "<span class=\"small\"><em>  &nbsp &nbsp " + obj.data[i].name + "</em></span>"
+            var button_finish = "<button type=\"button\" class=\"pull-right btn btn-outline btn-success btn-xs\">完成</button>";
+            var button_edit="<button type=\"button\" class=\"pull-right btn btn-outline btn-primary btn-xs\">编辑</button>";
+            var group_item = "<a href=\"#\" class=\"list-group-item\">"+ icon + text + name + time + button_finish + button_edit +"</a>";
+
+            $("#planslist").append(group_item);
+        }
+    }
+
+    function insertplansdefault(num)
+    {
+        if(obj.data.length > num) {
+            insertplans(num);
+        } else {
+            insertplans(obj.data.length);
+        }
+    }
+
+    function insertplansall()
+    {
+        insertplans(obj.data.length);
+    }
+
+
+
+
+</script>
+
