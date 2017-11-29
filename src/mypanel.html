@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    @@include('include/head.html')
+</head>
+
+<body>
+
+   <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <i class="fa fa-tasks fa-fw"></i> 过往信息
+                            <button type="button" class="pull-right btn btn-outline btn-default btn-link btn">添加过往</button>
+                        </div>
+                        <div class="panel-body">
+
+                             <div class="panel panel-default">
+                        <div class="panel-heading">
+                            2017年11月12日
+                        </div>
+                        <div class="panel-body">
+                            <p id="password">李成跟又我一起去吃肉串了。</p>
+                            <textarea id="textword" class="form-control" rows="3">李成跟又我一起去吃肉串了。</textarea>
+                            <button type="button" id="finishtask" class="pull-right btn btn-outline btn-success btn-sm btn">完成</button>
+                            <button type="button" id="edittask" class="pull-right btn btn-outline btn-primary btn-sm btn">编辑</button>
+                            <button type="button" class="pull-right btn btn-outline btn-danger btn-sm btn">删除</button>
+                        </div>
+                        </div>
+
+                            <div class="panel panel-default">
+                        <div class="panel-heading">
+                            2017年11月11日
+                        </div>
+                        <div class="panel-body">
+                            <p>李成借给我30块钱，下周还给他。</p>
+                            <button type="button" class="pull-right btn btn-outline btn-primary btn-sm btn">编辑</button>
+                            <button type="button" class="pull-right btn btn-outline btn-danger btn-sm btn">删除</button>
+                        </div>
+                        </div>
+
+
+                         <div class="panel panel-default">
+                        <div class="panel-heading">
+                            2017年11月10日
+                        </div>
+                        <div class="panel-body">
+                            <p>李成跟我一起去吃肉串了。</p>
+                            <button type="button" class="pull-right btn btn-outline btn-primary btn-sm btn">编辑</button>
+                            <button type="button" class="pull-right btn btn-outline btn-danger btn-sm btn">删除</button>
+                        </div>
+                        </div>
+
+
+                     <div class="panel panel-default">
+                        <div class="panel-heading">
+                            2017年11月8日
+                        </div>
+                        <div class="panel-body">
+                            <p>李成给了路边的乞丐20元钱</p>
+                            <button type="button" class="pull-right btn btn-outline btn-primary  btn-sm btn">编辑</button>
+                            <button type="button" class="pull-right btn btn-outline btn-danger btn-sm btn">删除</button>
+                        </div>
+                        </div>
+
+                        <a href="#" class="btn btn-primary btn-outline btn-block">查看所有过往</a>
+                      </div>
+
+                    </div>
+
+     @@include('include/foot.html')
+   <script type="text/javascript">
+       $(document).ready(function(){
+        $("#password").hide();
+        $("#edittask").hide();
+        $("#textword").text("hello");
+        $("#finishtask.btn-success").click(function(){
+            $("#password").text($("#textword").val());
+            $("#textword").text($("#textword").val());
+            $("#textword").hide();
+            $("#password").show();
+            $("#finishtask").hide();
+            $("#edittask").show();
+        });
+        $("#edittask.btn-primary").click(function(){
+            $("#textword").show();
+            $("#password").hide();
+            $("#finishtask").show();
+            $("#edittask").hide();
+        });
+        /*
+        var plans_number = 5;
+        insertplansdefault(plans_number);
+        $("#showallplans").click(function(){
+            insertplansall();
+            $("#showallplans").hide();
+            $("#closeplanslist").show();
+        });
+
+        */
+
+
+    });
+   </script>
+</body>
+
+</html>
